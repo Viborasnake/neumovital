@@ -1,0 +1,145 @@
+
+Preguntas estratégicas
+Rediseño Home · Neumovital
+Documento de Discovery · Levantamiento de requerimientos
+
+Contexto del proyecto
+Neumovital es un centro especializado en Diagnóstico y Rehabilitación Pulmonar. Su fundadora, Daniela Díaz Hinojosa, es Kinesióloga de la Universidad de Valparaíso desde el año 2010, y es Especialista en Kinesiología Respiratoria desde el año 2019 (DENAKE). Su formación académica fue consolidada con postgrados en la Universidad de Chile, Pontificia Universidad Católica de Argentina, y en la Universidad Autónoma de Barcelona en el año 2016, cursando el Máster en Atención del Enfermo Respiratorio Crónico.
+A nivel laboral, sus primeros inicios fueron en el ámbito público en Salas ERA de la atención primaria de salud (APS) de comunas como Puente Alto y La Pintana; luego fue parte del equipo clínico que en el año 2013 aperturó el área de Broncopulmonar adulto en el Hospital La Florida, en donde afianzó la experiencia clínica y el liderazgo que la caracteriza. Posteriormente, su desarrollo profesional la hizo avanzar hacia el ámbito privado, en donde tuvo la oportunidad de implementar y dirigir el Laboratorio de Función Pulmonar avanzada en Clínica Bupa Santiago, y posteriormente ser la responsable de crear, coordinar y ejecutar el Programa de Rehabilitación Pulmonar en Clínica Universidad de los Andes. 
+Su vasta experiencia en la gestión y atención de pacientes respiratorios crónicos, tanto en el diagnóstico como en el tratamiento de sus enfermedades, ha fortalecido una mirada integral del cuidado respiratorio. Esta visión la llevó a desarrollar el Método Neumovital®, un modelo de atención centrado no solo en la enfermedad pulmonar, sino también en la persona que la vive, acompañándola activamente en su proceso de salud y bienestar.
+Paralelamente a su labor clínica, ha desarrollado una destacada trayectoria académica como docente de postgrado en la Pontificia Universidad Católica de Chile, la Universidad de Valparaíso, la Universidad de Talca y la Universidad Mayor. Asimismo, ha participado activamente en sociedades científicas nacionales e internacionales, destacando su rol en la Sociedad Chilena de Enfermedades Respiratorias (SER Chile), especialmente en la Comisión de Enfermedades Intersticiales, y en la Sociedad Chilena de Kinesiología Respiratoria (SOCHIKIR), donde fue la primera coordinadora de la Comisión de Rehabilitación Pulmonar.
+
+El sitio web ya existe con un estilo visual definido. El trabajo está enfocado en la reestructuración estratégica del Home, con un objetivo central: potenciar la figura de Daniela como eje de la marca, mejorar la jerarquía de conversión y alinear la comunicación digital con el posicionamiento real de Neumovital en el mercado chileno.
+El benchmark competitivo realizado confirma que ningún competidor directo ha construido una marca personal sólida alrededor de sus profesionales. Ese es el espacio estratégico disponible.
+
+Preparado por
+Cristian Pizarro   ·   UX Product Designer
+Universidad del Desarrollo
++56 9 6521 7926   ·   cristian.pizarro@frontbook.cl
+
+Preguntas estratégicas
+Respondan con sus propias palabras, sin extensión mínima ni máxima. No hay respuestas incorrectas. Pueden completar este documento y devolvérnoslo, o responder en la reunión. Cada respuesta nos permite tomar decisiones de diseño más precisas y alineadas con su visión.
+#
+Pregunta
+Respuesta / Comentario
+A · Negocio y conversión
+P1
+¿Qué información o argumento necesita ver un visitante en el Home para decidir reservar su primera hora?
+Ej: 'Ver quién es Dani y su formación' / 'Saber qué patologías tratamos' / 'Leer testimonios de otros pacientes'
+✏️  Respuesta: La agenda y una breve explicación de lo que se está agendando, las patologías que atendemos y los exámenes que ofrecemos.   ¿Estoy en el lugar correcto?
+El paciente debe identificarse inmediatamente.
+Por ejemplo: ¿Te falta el aire al caminar? ¿Vives con una enfermedad respiratoria y sientes que cada vez haces menos cosas? ¿Necesitas una evaluación respiratoria completa o recuperar tu capacidad para vivir con mayor libertad? ¿Usas oxígeno, y no sabes cómo utilizarlo?
+
+“En Neumovital no tratamos únicamente pulmones”.
+
+Acompañamos en el diagnóstico haciendo exámenes respiratorios de alta calidad con respeto y amabilidad, y como así también, ayudamos a personas a recuperar funcionalidad, autonomía y calidad de vida mediante una atención respiratoria integral basada en el Método Neumovital®.   Promesa Alto Valor: ACOMPAÑO a Familiares Responsables de pacientes con enfermedad respiratoria crónica  a lograr mantener y mejorar la capacidad funcional de su ser querido en un período 1 a 3 meses, reduciendo el deterioro evitable y anticipando crisis respiratorias,  sin  programas genéricos ni depender únicamente de controles médicos aislados o resignarse a “esperar el avance”, mediante el Método Neumovital® Integral un modelo clínico coordinado y preventivo con el médico tratante, que se planifica integrando al paciente y su familia, para el “buen vivir” y el “buen morir”.
+
+
+P2
+¿Cuántos pacientes nuevos llegan actualmente por el sitio web? ¿Tienen algún dato o percepción sobre esto?
+Ej: 'Aprox. 3-4 por semana' o 'No lo sabemos con certeza'
+✏️  Respuesta: Esta del orden de 1 por semana No tenemos datos de la cantidad de pacientes que llegan por la web. Hoy es casi la totalidad es por referidos.
+
+
+P3
+¿Cómo es el proceso de contacto habitual de un paciente nuevo? ¿Qué pasos sigue desde que llega al sitio hasta que tiene su primera cita?
+✏️  Respuesta: Actualmente los pacientes están usando llamado telefónico y WhatsApp. Agenda Online es 1 a la semana. 
+
+
+
+P4
+¿Qué tipo de ISAPRE o sistema de salud usa la mayoría de sus pacientes? ¿Es relevante mostrarlo en el Home?
+✏️  Respuesta: La mayoría de los pacientes son de ISAPRE pero los Fonasa son como 40 %. No contamos con venta de bonos Fonasa pero si con un precio preferente para ellos. No es relevante pero si se debe mostrar en alguna parte que si atendemos pacientes de Fonasa.
+
+
+
+B · Audiencia y paciente ideal
+P5
+Si tuvieran que describir a su paciente ideal en 3 palabras o una frase, ¿cómo lo describirían?
+Ej: 'Adulto mayor con EPOC derivado por broncopulmonar'
+✏️  Respuesta: Para Rehablitacion Pulmonar, paciente adulto derivado por Enfermedad Respiratoria crónica (EPOC, EPI, Cancer de pulmón) con familia involucrada. Para Función Pulmonar: paciente crónico que viene hacer su batería de exámenes de control cada 3 o 6 meses. Y pacientes nuevos buscando diagnóstico.
+
+P6
+¿Reciben pacientes derivados por médicos? ¿Es ese un canal que quieren potenciar en el sitio?
+✏️  Respuesta: Si. La idea sería también mostrarnos como un centro solucionador de diagnóstico y rehabilitación para médicos Broncopulmonares, Geriatras, médicos internistas, cardiólogos,  etc.
+
+P7
+¿Qué pregunta hace casi siempre el paciente nuevo antes de confirmar su primera cita?
+Ej: '¿Atienden con Fonasa?' o '¿Cuánto demora el proceso?'
+✏️  Respuesta: En que consiste la Rehabilitacion que hacen ustedes. Cuanto sale y como se agenda.
+
+
+P8
+¿Han recibido pacientes con secuelas post-COVID? ¿Lo ven como un segmento relevante a comunicar?
+✏️  Respuesta: No. Pero si es un segmento que podría llegar para consultar, pero no es prioridad. La prioridad es pacientes crónicos fumadores, ex fumadores, con diagnóstico de EPOC (enfermedad pulmonar obstructiva crónica, enfisema, bronquitis crónica, Enfermedad pulmonar intersticial difusa, fibrosis pulmonar, fibrosis pulmonar idiopática, neumonitis por hipersensibilidad, sarcoidosis, etc.
+
+
+
+C · Figura de Daniela y las fundadoras
+P9
+¿Cómo describiría Daniela su trabajo en una sola oración, sin tecnicismos?
+Ej: 'Ayudo a personas con problemas respiratorios a volver a hacer lo que aman'
+✏️  Respuesta: Acompaño a personas con enfermedades respiratorias en el Buen Vivir y el Buen Morir, promoviendo bienestar, autonomía y calidad de vida
+
+
+
+P10
+¿Qué dicen los pacientes cuando recomiendan a Dani? ¿Qué palabras usan espontáneamente?
+Ej: 'Muy dedicada', 'explica todo', 'se preocupa de verdad'
+✏️  Respuesta: Que es muy amable y se preocupa de explicarle a los pacientes todo sobre su enfermedad con palabras simples.
+"Con la atención durante varios años, en mi calidad de esposa y acompañante de un paciente de Daniela, en breves palabras quiero hacer un reconocimiento a su trabajo destacando su excelente profesionalismo, apoyo, compromiso con el paciente, siempre con una gran disposición y calidez humana, todas cualidades que han significado un gran aporte al tratamiento de la compleja enfermedad de mi marido" Alicia Basso
+P11
+De toda la trayectoria de Daniela, ¿cuáles 2–3 credenciales creen que más pesan para un paciente?
+✏️  Respuesta: Especialista en Rehabilitación Respiratoria / Amplia experiencia clínica / Compromiso y preocupación por el paciente y su familia.
+P12
+¿Existe material fotográfico o video de Dani en contexto real (atendiendo, en el espacio, etc.)?
+Ej: 'Sí, tenemos fotos profesionales' / 'Solo headshots' / 'No tenemos'
+✏️  Respuesta: Si algunos videos y capturas de teléfono
+
+
+
+P13
+¿Tiene Daniela presencia activa en Instagram, LinkedIn u otra plataforma? ¿Se vincularía al sitio?
+✏️  Respuesta: Existe algo de contenido orgánico en Instagram, pero es poco, necesitamos aumentar. Si podríamos vincular al sitio
+
+D · Servicios y contenido
+P14
+¿Hay un servicio 'estrella' o diferenciador que quieran que destaque por encima de los demás?
+Ej: 'La rehabilitación pulmonar es nuestro core'
+✏️  Respuesta: La Rehabilitación Pulmonar es el corazón, sin embargo en lo económico necesitamos potenciar el laboratorio de función pulmonar: los exámenes.
+
+
+P15
+¿Están dispuestas a generar contenido educativo (artículos, tips) con cierta regularidad?
+Ej: 'Sí, al menos 1 al mes' / 'No por ahora'
+✏️  Respuesta: si, todo lo que sea necesario.
+
+
+P16
+¿Estarían abiertas a publicar rangos de precio orientativos en el sitio? ¿Por qué sí o no?
+✏️  Respuesta: si
+
+
+E · Sitio actual y dirección del rediseño
+P17
+¿Qué es lo que más les molesta del Home actual? ¿Qué sienten que definitivamente no funciona?
+✏️  Respuesta: El diseño hace que la gente se pierda y no termine por reservar. Imágenes muy grandes, textos que deberían estar ocultos tras un botón. Existen fotografías que ya no son reales (como la rehabilitación cardiovascular, hay que sacar todo eso incluyo las fotos)
+
+P18
+¿Hay alguna sección o elemento que quieren preservar sí o sí?
+✏️  Respuesta: Las secciones y elementos no los queremos eliminar, necesitamos redistribuirlos o rediseñarlos de forma que sea mas armónico en lo referente a jerarquía visual y espacios.
+
+P19
+¿Tienen referencias de sitios que les parezcan bien logrados? ¿Por qué les gustan?
+✏️  Respuesta: https://cekim.cl/
+Tiene educación y reserva de horas.
+
+P20
+Si el nuevo Home tuviera que transmitir UNA sola cosa, ¿qué sería?
+Ej: 'Que somos la mejor opción especializada' / 'Que aquí serán muy bien atendidos'
+✏️  Respuesta:  Somos un Centro de salud Respiratoria enfocado en la persona que Integra un diagnóstico avanzado, rehabilitación pulmonar y acompañamiento humano para ayudar a las personas a vivir mejor con su condición respiratoria.
+
+Gracias por tomarse el tiempo de responder con honestidad. Sus palabras son el mejor insumo para el diseño.
+
+
+

@@ -1,0 +1,735 @@
+with open('dashboard_proyecto.html', 'w') as out:
+    out.write('''<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeumoVital - Dashboard Estratégico</title>
+    <!-- Modern Font: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8f55a0;
+            --primary-light: #f4eff5;
+            --secondary: #46bfee;
+            --secondary-light: #edf8fd;
+            --bg-page: #f8fafc;
+            --surface: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 40px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            background-image: 
+                radial-gradient(circle at 15% 50px, rgba(143, 85, 160, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(70, 191, 238, 0.04) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* ----- HEADER ----- */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .brand-title {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .brand-title span {
+            color: var(--primary);
+        }
+
+        .header-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .brand-badge {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            box-shadow: var(--shadow-sm);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-creator {
+            background: var(--primary-light);
+            color: var(--primary);
+            border-color: var(--primary-light);
+        }
+        
+        .brand-badge i { color: var(--secondary); }
+        .badge-creator i { color: var(--primary); }
+
+        /* ----- BENTO GRID: OBJETIVOS ----- */
+        .section-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title i { color: var(--primary); }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .bento-card {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .bento-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .bento-card:nth-child(even) .bento-icon {
+            background: var(--secondary-light);
+            color: var(--secondary);
+        }
+
+        .bento-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .bento-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ----- MAIN BOARD CARDS ----- */
+        .hero-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 60px;
+        }
+
+        .hero-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-title-group h3 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+        
+        .hero-title-group p {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .status-pill {
+            background: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+
+        .feature-item {
+            padding: 24px;
+            border-radius: var(--radius-md);
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+        
+        .feature-item:hover {
+            background: var(--surface);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(143,85,160,0.06);
+        }
+
+        .feat-title {
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .feat-title i { color: var(--primary); }
+        .feat-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+        .feat-badge {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 6px;
+            color: var(--text-main);
+        }
+        .feat-badge strong { color: var(--secondary); }
+
+        /* Links */
+        .action-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-outline {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+        }
+        .btn-outline:hover { background: var(--bg-page); border-color: #cbd5e1; }
+
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-primary:hover { background: #7a468a; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(143,85,160,0.2); }
+
+        .btn-secondary { background: var(--secondary); color: #fff; }
+        .btn-secondary:hover { background: #35a5d4; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(70,191,238,0.2); }
+
+        /* ----- MODERN ROADMAP ----- */
+        .roadmap-container {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .roadmap-timeline {
+            position: relative;
+            margin-top: 40px;
+        }
+        
+        .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .rm-card {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 40px;
+        }
+        .rm-card:last-child { margin-bottom: 0; }
+
+        /* The node on the timeline */
+        .rm-node {
+            position: absolute;
+            left: 17px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--surface);
+            border: 3px solid var(--secondary);
+            border-radius: 50%;
+            z-index: 2;
+            transition: 0.3s;
+        }
+
+        .rm-content {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            transition: 0.3s;
+        }
+
+        .rm-card:hover .rm-content {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+        .rm-card:hover .rm-node {
+            background: var(--secondary);
+            transform: scale(1.3);
+            box-shadow: 0 0 0 4px var(--secondary-light);
+        }
+
+        .rm-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .rm-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .rm-tags {
+            display: flex;
+            gap: 12px;
+        }
+
+        .rm-tag {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .tag-date { background: var(--bg-page); border: 1px solid var(--border); color: var(--text-muted); }
+        .tag-edit { background: var(--primary-light); color: var(--primary); }
+        .tag-new { background: var(--secondary-light); color: #0288d1; }
+
+        .rm-body p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+        
+        .rm-route {
+            font-family: monospace;
+            font-size: 13px;
+            background: var(--bg-page);
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: var(--primary);
+        }
+
+        .rm-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        /* Progress Bar Modern */
+        .progress-group { flex: 1; max-width: 300px; }
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        .progress-track {
+            height: 6px;
+            background: var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--secondary);
+            width: 0%;
+            border-radius: 10px;
+        }
+
+        @media(max-width: 768px) {
+            .rm-card { padding-left: 40px; }
+            .roadmap-timeline::before { left: 10px; }
+            .rm-node { left: 3px; }
+            .hero-card, .roadmap-container { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- HEADER -->
+    <header class="dashboard-header">
+        <div class="brand-title">
+            Neumo<span>Vital</span>
+        </div>
+        <div class="header-badges">
+            <div class="brand-badge badge-creator">
+                <i class="fa-solid fa-user-tie"></i> Elaborado por: Rodrigo / Estratega
+            </div>
+            <div class="brand-badge">
+                <i class="fa-solid fa-rocket"></i> Reporte de Avance
+            </div>
+        </div>
+    </header>
+
+    <!-- BENTO GRID: ESTRATEGIA -->
+    <h2 class="section-title"><i class="fa-solid fa-crosshairs"></i> Objetivos Estratégicos</h2>
+    <div class="bento-grid">
+        <div class="bento-card">
+            <div class="bento-icon"><i class="fa-solid fa-user-doctor"></i></div>
+            <div class="bento-title">Marca Personal</div>
+            <div class="bento-desc">Posicionar a Daniela Díaz Hinojosa como el eje articulador, capitalizando su autoridad médica.</div>
+        </div>
+        <div class="bento-card">
+            <div class="bento-icon"><i class="fa-solid fa-filter"></i></div>
+            <div class="bento-title">Embudo de Conversión</div>
+            <div class="bento-desc">Eliminar la confusión del usuario y guiarlo directamente a la plataforma de agendamiento online.</div>
+        </div>
+        <div class="bento-card">
+            <div class="bento-icon"><i class="fa-solid fa-lungs"></i></div>
+            <div class="bento-title">Impulso Diagnóstico</div>
+            <div class="bento-desc">Potenciar económicamente el Laboratorio de Función Pulmonar sin descuidar la Rehabilitación.</div>
+        </div>
+        <div class="bento-card">
+            <div class="bento-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+            <div class="bento-title">Captación B2B</div>
+            <div class="bento-desc">Usar testimonios como prueba social y atraer a médicos derivadores como aliados estratégicos.</div>
+        </div>
+    </div>
+
+    <!-- MAIN HOME CARD -->
+    <div class="hero-card">
+        <div class="hero-header">
+            <div class="hero-title-group">
+                <h3>Home / Inicio</h3>
+                <p>Landing page principal diseñada para máxima conversión y confianza.</p>
+            </div>
+            <div class="status-pill">
+                <i class="fa-solid fa-circle-check"></i> Rediseñado
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feat-title"><i class="fa-solid fa-bolt"></i> Hero & Cobertura</div>
+                <div class="feat-desc">Mensaje de alivio inmediato con botones y badges de FONASA/ISAPRE para derribar barreras de costo.</div>
+                <div class="feat-badge">Feature: <strong>Integración Badges</strong></div>
+            </div>
+            <div class="feature-item">
+                <div class="feat-title"><i class="fa-solid fa-stethoscope"></i> Patologías Visibles</div>
+                <div class="feat-desc">Listado visual de alto impacto para que el paciente crónico se autoidentifique rápidamente.</div>
+                <div class="feat-badge">Feature: <strong>Pills Orgánicas</strong></div>
+            </div>
+            <div class="feature-item">
+                <div class="feat-title"><i class="fa-solid fa-money-bill-wave"></i> Transparencia Comercial</div>
+                <div class="feat-desc">Reducción de incertidumbre mediante la publicación de copagos aproximados.</div>
+                <div class="feat-badge">Feature: <strong>Modal de Precios</strong></div>
+            </div>
+            <div class="feature-item">
+                <div class="feat-title"><i class="fa-solid fa-award"></i> Authority Building</div>
+                <div class="feat-desc">Humanizar la marca mediante la trayectoria de su fundadora y el Método Neumovital.</div>
+                <div class="feat-badge">Feature: <strong>Sección Biográfica</strong></div>
+            </div>
+            <div class="feature-item">
+                <div class="feat-title"><i class="fa-solid fa-handshake"></i> Captación B2B</div>
+                <div class="feat-desc">Posicionar a la clínica como una extensión de excelencia para médicos especialistas.</div>
+                <div class="feat-badge">Feature: <strong>Banner Derivadores</strong></div>
+            </div>
+            <div class="feature-item">
+                <div class="feat-title"><i class="fa-solid fa-arrow-pointer"></i> Flujo de Cierre</div>
+                <div class="feat-desc">Estandarización del flujo hacia el software de reservas eliminando fricción.</div>
+                <div class="feat-badge">Feature: <strong>Floating CTA</strong></div>
+            </div>
+        </div>
+
+        <div class="action-links">
+            <a href="https://neumovital.cl/" target="_blank" class="btn btn-outline"><i class="fa-solid fa-link"></i> Ver Actual</a>
+            <a href="https://neumovital.cl/propuesta-v1/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-eye"></i> Propuesta V1 (Rigor)</a>
+            <a href="https://neumovital.cl/propuesta-v2/" target="_blank" class="btn btn-secondary"><i class="fa-solid fa-eye"></i> Propuesta V2 (Orgánico)</a>
+        </div>
+    </div>
+
+    <!-- ROADMAP VERTICAL -->
+    <h2 class="section-title"><i class="fa-solid fa-route"></i> Roadmap de Desarrollo</h2>
+    <div class="roadmap-container">
+        
+        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 10px;">Cronograma de entregas: <strong>2 páginas por semana</strong> a partir de hoy.</p>
+        
+        <div class="roadmap-timeline">
+            
+            <!-- ITEM 1 -->
+            <div class="rm-card">
+                <div class="rm-node"></div>
+                <div class="rm-content">
+                    <div class="rm-header">
+                        <div class="rm-title">1. Sobre Neumovital</div>
+                        <div class="rm-tags">
+                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (24-28 Jun)</span>
+                            <span class="rm-tag tag-edit"><i class="fa-solid fa-pen-to-square"></i> Editar</span>
+                        </div>
+                    </div>
+                    <div class="rm-body">
+                        <p>Detallar la misión, visión, valores (con enfoque humano), la historia de la clínica, la presentación de todo el equipo de profesionales y fotos de las instalaciones.<br><br>Ruta: <span class="rm-route">/sobre-neumovital</span></p>
+                    </div>
+                    <div class="rm-footer">
+                        <div class="progress-group">
+                            <div class="progress-text"><span>Progreso</span><span>0%</span></div>
+                            <div class="progress-track"><div class="progress-fill"></div></div>
+                        </div>
+                        <div class="action-links">
+                            <a href="https://neumovital.cl/about-us/" target="_blank" class="btn btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Base Actual</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="rm-card">
+                <div class="rm-node"></div>
+                <div class="rm-content">
+                    <div class="rm-header">
+                        <div class="rm-title">2. Daniela Díaz</div>
+                        <div class="rm-tags">
+                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (24-28 Jun)</span>
+                            <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
+                        </div>
+                    </div>
+                    <div class="rm-body">
+                        <p>Página dedicada exclusivamente a la fundadora. Incluirá su perfil completo, biografía detallada, credenciales, su filosofía de trabajo con el Método Neumovital®, material audiovisual y publicaciones.<br><br>Ruta: <span class="rm-route">/daniela-diaz</span></p>
+                    </div>
+                    <div class="rm-footer">
+                        <div class="progress-group">
+                            <div class="progress-text"><span>Progreso</span><span>0%</span></div>
+                            <div class="progress-track"><div class="progress-fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="rm-card">
+                <div class="rm-node"></div>
+                <div class="rm-content">
+                    <div class="rm-header">
+                        <div class="rm-title">3. Servicios</div>
+                        <div class="rm-tags">
+                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 2 (1-5 Jul)</span>
+                            <span class="rm-tag tag-edit"><i class="fa-solid fa-pen-to-square"></i> Editar</span>
+                        </div>
+                    </div>
+                    <div class="rm-body">
+                        <p>Visión general de la oferta integral. Detalle de Rehabilitación Pulmonar, Laboratorio de Función Pulmonar (espirometría, DLCO) y Monitorización del Sueño, con CTAs de reserva.<br><br>Ruta: <span class="rm-route">/servicios</span></p>
+                    </div>
+                    <div class="rm-footer">
+                        <div class="progress-group">
+                            <div class="progress-text"><span>Progreso</span><span>0%</span></div>
+                            <div class="progress-track"><div class="progress-fill"></div></div>
+                        </div>
+                        <div class="action-links">
+                            <a href="https://neumovital.cl/services/" target="_blank" class="btn btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Base Actual</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM 4 -->
+            <div class="rm-card">
+                <div class="rm-node"></div>
+                <div class="rm-content">
+                    <div class="rm-header">
+                        <div class="rm-title">4. Para Médicos</div>
+                        <div class="rm-tags">
+                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 2 (1-5 Jul)</span>
+                            <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
+                        </div>
+                    </div>
+                    <div class="rm-body">
+                        <p>Dirigida a profesionales derivadores. Mostrará a Neumovital como centro aliado en diagnóstico y rehabilitación, cómo derivar pacientes, y oportunidades de colaboración conjunta.<br><br>Ruta: <span class="rm-route">/para-medicos</span></p>
+                    </div>
+                    <div class="rm-footer">
+                        <div class="progress-group">
+                            <div class="progress-text"><span>Progreso</span><span>0%</span></div>
+                            <div class="progress-track"><div class="progress-fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM 5 -->
+            <div class="rm-card">
+                <div class="rm-node"></div>
+                <div class="rm-content">
+                    <div class="rm-header">
+                        <div class="rm-title">5. Patologías</div>
+                        <div class="rm-tags">
+                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 3 (8-12 Jul)</span>
+                            <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
+                        </div>
+                    </div>
+                    <div class="rm-body">
+                        <p>Enumerará las enfermedades tratadas (EPOC, EPI, Cáncer de Pulmón, Fibrosis Pulmonar, etc.), con una breve descripción de cada una y cómo la clínica ayuda en cada condición.<br><br>Ruta: <span class="rm-route">/patologias</span></p>
+                    </div>
+                    <div class="rm-footer">
+                        <div class="progress-group">
+                            <div class="progress-text"><span>Progreso</span><span>0%</span></div>
+                            <div class="progress-track"><div class="progress-fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM 6 -->
+            <div class="rm-card">
+                <div class="rm-node"></div>
+                <div class="rm-content">
+                    <div class="rm-header">
+                        <div class="rm-title">6. FAQ</div>
+                        <div class="rm-tags">
+                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 3 (8-12 Jul)</span>
+                            <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
+                        </div>
+                    </div>
+                    <div class="rm-body">
+                        <p>Resolver dudas comunes sobre costos, proceso de agendamiento, atención por Fonasa/Isapre y duración de los tratamientos respiratorios.<br><br>Ruta: <span class="rm-route">/faq</span></p>
+                    </div>
+                    <div class="rm-footer">
+                        <div class="progress-group">
+                            <div class="progress-text"><span>Progreso</span><span>0%</span></div>
+                            <div class="progress-track"><div class="progress-fill"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM 7 -->
+            <div class="rm-card">
+                <div class="rm-node"></div>
+                <div class="rm-content">
+                    <div class="rm-header">
+                        <div class="rm-title">7. Contacto</div>
+                        <div class="rm-tags">
+                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 4 (15-19 Jul)</span>
+                            <span class="rm-tag tag-edit"><i class="fa-solid fa-pen-to-square"></i> Editar</span>
+                        </div>
+                    </div>
+                    <div class="rm-body">
+                        <p>Centralizar el formulario de consultas, visibilizar el teléfono y WhatsApp, correo electrónico, mapa de ubicación física y horarios de atención.<br><br>Ruta: <span class="rm-route">/contacto</span></p>
+                    </div>
+                    <div class="rm-footer">
+                        <div class="progress-group">
+                            <div class="progress-text"><span>Progreso</span><span>0%</span></div>
+                            <div class="progress-track"><div class="progress-fill"></div></div>
+                        </div>
+                        <div class="action-links">
+                            <a href="https://neumovital.cl/appointment-booking/" target="_blank" class="btn btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Base Actual</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- EXTRA SECTION -->
+    <h2 class="section-title" style="margin-top: 60px;"><i class="fa-solid fa-lightbulb"></i> Extra: Referencias Externas</h2>
+    <div class="bento-card" style="margin-bottom: 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div>
+            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Revisión de Funnel Externo (Systeme.io)</h3>
+            <p style="color: var(--text-muted); font-size: 15px;">Analizar la estructura de conversión de la siguiente landing page externa creada por Rodrigo para extraer aprendizajes.</p>
+        </div>
+        <a href="https://rodrigo-rgv02.systeme.io/neumovital" target="_blank" class="btn btn-primary" style="background: #0f172a; box-shadow: none;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Revisar Enlace
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>''')
