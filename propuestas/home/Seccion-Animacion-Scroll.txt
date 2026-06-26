@@ -1,0 +1,155 @@
+[vc_row full_width="stretch_row_content_no_spaces" css=".vc_custom_vg_anim{margin:0 !important;padding:0 !important;}"][vc_column][vc_column_text]
+<style>
+.vg-scroll-seq-container {
+    position: relative;
+    width: 100%;
+    /* La altura define la duración del scroll. 300vh da un buen margen para 31 frames fluidos */
+    height: 300vh; 
+    background-color: #f8fbfc; /* Color de fondo acorde al sitio */
+}
+
+.vg-scroll-seq-sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vg-scroll-seq-canvas {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover asegura que el canvas ocupe todo el ancho/alto sin deformar la imagen, manteniendo el aspect ratio */
+    object-fit: cover;
+    display: block;
+}
+
+.vg-scroll-seq-text {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0; /* Lo manejaremos con GSAP para que aparezca/desaparezca */
+}
+
+.vg-scroll-seq-text h2 {
+    font-size: clamp(35px, 5vw, 65px);
+    font-weight: 900;
+    color: #ffffff !important;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    margin: 0;
+    line-height: 1.1;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+.vg-scroll-seq-text h2 span {
+    color: #46bfee;
+}
+</style>
+
+<div class="vg-scroll-seq-container">
+    <div class="vg-scroll-seq-sticky">
+        <canvas id="vg-scroll-seq-canvas"></canvas>
+        <div class="vg-scroll-seq-text">
+            <h2>Paso a paso<br>hacia tu <span>recuperación</span></h2>
+        </div>
+    </div>
+</div>
+
+<!-- Cargamos GSAP y ScrollTrigger desde CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const canvas = document.getElementById("vg-scroll-seq-canvas");
+    const context = canvas.getContext("2d");
+
+    const frameCount = 31;
+    const currentFrame = index => (
+        `https://neumovital.cl/wp-content/uploads/2026/06/rehabilitacion-pulmonar-trotadora-${(index + 1).toString().padStart(3, '0')}.png`
+    );
+
+    const images = [];
+    const frames = {
+        frame: 0
+    };
+
+    // Variables para precarga
+    let loadedImages = 0;
+
+    // Precargamos los 31 frames
+    for (let i = 0; i < frameCount; i++) {
+        const img = new Image();
+        img.src = currentFrame(i);
+        
+        img.onload = () => {
+            loadedImages++;
+            // Dibujamos el primer frame en cuanto carga
+            if (i === 0) {
+                render();
+            }
+        };
+        images.push(img);
+    }
+
+    function render() {
+        // Asegurarnos de que la primera imagen esté lista para tomar sus dimensiones
+        if (images[0].complete && images[0].naturalWidth > 0) {
+            // Seteamos el tamaño interno del canvas al tamaño real de la imagen. 
+            // El object-fit: cover en el CSS se encarga del resto en el navegador.
+            canvas.width = images[0].naturalWidth;
+            canvas.height = images[0].naturalHeight;
+        }
+
+        const img = images[Math.round(frames.frame)];
+        if (img && img.complete) {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        }
+    }
+
+    // Animación de GSAP conectada al scroll
+    gsap.to(frames, {
+        frame: frameCount - 1,
+        snap: "frame",
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".vg-scroll-seq-container",
+            start: "top top", // Comienza cuando la sección toca el borde superior de la ventana
+            end: "+=200%",    // La animación dura el equivalente a hacer scroll 2 veces la altura de la pantalla
+            scrub: 0.1,       // Scrub suave. 0.1 segundos para suavizar el avance
+            pin: true         // Fija la sección para que funcione perfectamente (respaldo de position: sticky)
+        },
+        onUpdate: render // Cada vez que el scroll avanza, llama a render() para dibujar el siguiente frame
+    });
+
+    // Opcional: Animamos un texto apareciendo y desapareciendo mientras avanza la trotadora
+    gsap.to(".vg-scroll-seq-text", {
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".vg-scroll-seq-container",
+            start: "top top",
+            end: "+=100%",
+            scrub: true
+        }
+    });
+
+    // Refrescar ScrollTrigger en caso de cambios de tamaño de ventana para evitar saltos
+    window.addEventListener("resize", () => {
+        ScrollTrigger.refresh();
+        render();
+    });
+});
+</script>
+[/vc_column_text][/vc_column][/vc_row]
