@@ -8,7 +8,7 @@
 
 <section class="vg-services"><div style="display:none;"><h2>Nuestra Especialidad</h2></div>
 
-<div class="vg-cards-grid"><div class="vg-card vg-card-diag" style="display:flex;flex-direction:column;"><div class="vg-card-num">01</div><button class="vg-play-btn" onclick="vgPlayText('text-diag-v1',this)"><i class="fa fa-play"></i> Escuchar Sección</button><div id="text-diag-v1"><i class="fa fa-lungs" style="font-size:38px;color:#46bfee;margin-bottom:15px;display:block;"></i><h3>Diagnóstico<br>Respiratorio</h3><p>Equipamiento de frontera — incluyendo pletismógrafo de cuerpo completo — para espirometrías y pruebas de función pulmonar de alta precisión.</p><button onclick="document.getElementById('vg-price-modal-diag').style.display='flex'" style="background:none;border:none;padding:0;margin:0 0 25px 0;font-size:15px;color:#8f55a0;text-decoration:underline;font-weight:800;cursor:pointer;text-align:left;"><i class="fa fa-tag" style="margin-right:5px;"></i> Ver Rangos de Precios</button></div><a href="https://neumovital.cl/reserva-funcion-pulmonar/" class="vg-btn" style="width:100%;text-align:center;padding:15px;font-size:15px;display:block;box-sizing:border-box;">Reservar Hora <i class="fa fa-arrow-right" style="margin-left:5px;"></i></a></div><div class="vg-card vg-card-rehab" style="display:flex;flex-direction:column;"><div class="vg-card-num">02</div><button class="vg-play-btn" style="position:relative; z-index:4;" onclick="vgPlayText('text-rehab-v1',this)"><i class="fa fa-play"></i> Escuchar Sección</button><div id="text-rehab-v1"><i class="fa fa-heartbeat" style="font-size:38px;color:#8f55a0;margin-bottom:15px;display:block;"></i><h3>Rehabilitación<br>Pulmonar</h3><p>Tratamientos no genéricos diseñados para mejorar tu tolerancia al ejercicio y reducir el ahogo diario. <strong>Rehabilitación Pulmonar</strong> personalizada con Método Neumovital®.</p><button onclick="document.getElementById('vg-price-modal-rehab').style.display='flex'" style="background:none;border:none;padding:0;margin:0 0 25px 0;font-size:15px;color:#8f55a0;text-decoration:underline;font-weight:800;cursor:pointer;text-align:left;"><i class="fa fa-tag" style="margin-right:5px;"></i> Ver Rangos de Precios</button></div><a href="https://neumovital.cl/reserva-rehabilitacion-pulmonar/" class="vg-btn" style="width:100%;text-align:center;padding:15px;font-size:15px;display:block;box-sizing:border-box;">Reservar Hora <i class="fa fa-arrow-right" style="margin-left:5px;"></i></a><div class="vg-scroll-seq-container"><canvas id="vg-scroll-seq-canvas"></canvas></div></div></div></section>
+<div class="vg-cards-grid"><div class="vg-card vg-card-diag" style="display:flex;flex-direction:column;"><div class="vg-card-num">01</div><button class="vg-play-btn" onclick="vgPlayText('text-diag-v1',this)"><i class="fa fa-play"></i> Escuchar Sección</button><div id="text-diag-v1"><i class="fa fa-lungs" style="font-size:38px;color:#46bfee;margin-bottom:15px;display:block;"></i><h3>Diagnóstico<br>Respiratorio</h3><p>Equipamiento de frontera — incluyendo pletismógrafo de cuerpo completo — para espirometrías y pruebas de función pulmonar de alta precisión.</p><button onclick="document.getElementById('vg-price-modal-diag').style.display='flex'" style="background:none;border:none;padding:0;margin:0 0 25px 0;font-size:15px;color:#8f55a0;text-decoration:underline;font-weight:800;cursor:pointer;text-align:left;"><i class="fa fa-tag" style="margin-right:5px;"></i> Ver Rangos de Precios</button></div><a href="https://neumovital.cl/reserva-funcion-pulmonar/" class="vg-btn" style="width:100%;text-align:center;padding:15px;font-size:15px;display:block;box-sizing:border-box;">Reservar Hora <i class="fa fa-arrow-right" style="margin-left:5px;"></i></a><div class="vg-scroll-seq-container"><canvas id="vg-scroll-seq-canvas-diag"></canvas></div></div><div class="vg-card vg-card-rehab" style="display:flex;flex-direction:column;"><div class="vg-card-num">02</div><button class="vg-play-btn" style="position:relative; z-index:4;" onclick="vgPlayText('text-rehab-v1',this)"><i class="fa fa-play"></i> Escuchar Sección</button><div id="text-rehab-v1"><i class="fa fa-heartbeat" style="font-size:38px;color:#8f55a0;margin-bottom:15px;display:block;"></i><h3>Rehabilitación<br>Pulmonar</h3><p>Tratamientos no genéricos diseñados para mejorar tu tolerancia al ejercicio y reducir el ahogo diario. <strong>Rehabilitación Pulmonar</strong> personalizada con Método Neumovital®.</p><button onclick="document.getElementById('vg-price-modal-rehab').style.display='flex'" style="background:none;border:none;padding:0;margin:0 0 25px 0;font-size:15px;color:#8f55a0;text-decoration:underline;font-weight:800;cursor:pointer;text-align:left;"><i class="fa fa-tag" style="margin-right:5px;"></i> Ver Rangos de Precios</button></div><a href="https://neumovital.cl/reserva-rehabilitacion-pulmonar/" class="vg-btn" style="width:100%;text-align:center;padding:15px;font-size:15px;display:block;box-sizing:border-box;">Reservar Hora <i class="fa fa-arrow-right" style="margin-left:5px;"></i></a><div class="vg-scroll-seq-container"><canvas id="vg-scroll-seq-canvas"></canvas></div></div></div></section>
 
 <section class="vg-video-banner"><div class="vg-video-overlay"><div class="vg-video-badge"><i class="fa fa-play-circle"></i> Nuestro Centro</div><h2>Así se ve la <span style="color:#46bfee">Rehabilitación Pulmonar</span> de verdad</h2><p>Instalaciones diseñadas para tu recuperación. Equipamiento de frontera, ambiente cálido y equipo especializado.</p><a href="#" onclick="var m=document.getElementById('vg-video-modal');m.style.display='flex';if(!m.querySelector('video')){var v=document.createElement('video');v.controls=true;v.style.cssText='width:100%;border-radius:14px;margin-top:18px;max-height:65vh;background:#000;display:block;position:relative;z-index:1;';var s=document.createElement('source');s.src='https://neumovital.cl/wp-content/uploads/2026/06/centro-rehabilitacion-pulmonar-numovital.mp4';s.type='video/mp4';v.appendChild(s);m.querySelector('.vg-modal-box').appendChild(v);}var vp=m.querySelector('video');if(vp)vp.play();return false;" class="vg-btn" style="padding:16px 40px;font-size:16px;"><i class="fa fa-play-circle" style="margin-right:8px;"></i> Ver Video del Centro</a></div></section>
 
@@ -73,6 +73,52 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         onUpdate: render
     });
+    
+    const canvasDiag = document.getElementById("vg-scroll-seq-canvas-diag");
+    if(canvasDiag) {
+        const contextDiag = canvasDiag.getContext("2d");
+        const frameCountDiag = 31;
+        const currentFrameDiag = index => (
+            `https://neumovital.cl/wp-content/uploads/2026/06/cabina-pletismografia-rehabilitacion-pulmonar-numovital-${(index + 1).toString().padStart(3, '0')}.png`
+        );
+        const imagesDiag = [];
+        const framesDiag = { frame: 0 };
+        for (let i = 0; i < frameCountDiag; i++) {
+            const img = new Image();
+            img.src = currentFrameDiag(i);
+            img.onload = () => {
+                if (i === 0) renderDiag();
+            };
+            imagesDiag.push(img);
+        }
+        function renderDiag() {
+            if (imagesDiag[0].complete && imagesDiag[0].naturalWidth > 0) {
+                canvasDiag.width = imagesDiag[0].naturalWidth;
+                canvasDiag.height = imagesDiag[0].naturalHeight;
+            }
+            const img = imagesDiag[Math.round(framesDiag.frame)];
+            if (img && img.complete) {
+                contextDiag.clearRect(0, 0, canvasDiag.width, canvasDiag.height);
+                contextDiag.drawImage(img, 0, 0, canvasDiag.width, canvasDiag.height);
+            }
+        }
+        gsap.to(framesDiag, {
+            frame: frameCountDiag - 1,
+            snap: "frame",
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".vg-card-diag",
+                start: "top 70%",
+                end: "bottom 30%",
+                scrub: 0.1
+            },
+            onUpdate: renderDiag
+        });
+        window.addEventListener("resize", () => {
+            renderDiag();
+        });
+    }
+
     window.addEventListener("resize", () => {
         ScrollTrigger.refresh();
         render();
