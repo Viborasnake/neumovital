@@ -469,7 +469,7 @@
         </div>
         <div class="header-badges">
             <div class="brand-badge" style="background: #eff6ff; color: #3b82f6; border-color: #bfdbfe; font-weight: 800;">
-                <i class="fa-solid fa-clock-rotate-left fa-spin-pulse" style="animation-duration: 3s;"></i> Update: HOY
+                <i class="fa-solid fa-clock-rotate-left fa-spin-pulse" style="animation-duration: 3s;"></i> Update: 26 Jun 2026 (HOY)
             </div>
             <div class="brand-badge" style="background: #e2f5e9; color: #1d976c; border-color: #bce6cf;">
                 <i class="fa-regular fa-calendar-check"></i> Término de entregas de propuestas: 07 Julio 2026
@@ -488,14 +488,14 @@
                 <p style="color: var(--text-muted); font-size: 14px;">Avance basado en hitos estratégicos y páginas diseñadas.</p>
             </div>
             <div style="text-align: right;">
-                <div style="font-size: 24px; font-weight: 900; color: var(--secondary);">22%</div>
-                <div style="font-size: 13px; color: var(--text-muted); font-weight: 600;">2 de 9 Hitos</div>
+                <div style="font-size: 24px; font-weight: 900; color: var(--secondary);">11%</div>
+                <div style="font-size: 13px; color: var(--text-muted); font-weight: 600;">1 de 9 Hitos</div>
             </div>
         </div>
         
         <!-- Progress Bar -->
         <div style="height: 12px; background: var(--border); border-radius: 20px; overflow: hidden; margin-bottom: 20px; display: flex;">
-            <div style="height: 100%; width: 22%; background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%); border-radius: 20px; transition: 1s width ease-in-out;"></div>
+            <div style="height: 100%; width: 11%; background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%); border-radius: 20px; transition: 1s width ease-in-out;"></div>
         </div>
         
         <!-- Legend / Milestones -->
@@ -503,14 +503,14 @@
             <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px 15px; border-radius: 8px; color: #166534; font-weight: 600;">
                 <i class="fa-solid fa-check-circle"></i> Discovery & Estrategia (Listo)
             </div>
-            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px 15px; border-radius: 8px; color: #166534; font-weight: 600;">
-                <i class="fa-solid fa-check-circle"></i> Home / Inicio V1.1 (Listo)
-            </div>
             <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 10px 15px; border-radius: 8px; color: #b45309; font-weight: 600;">
-                <i class="fa-solid fa-spinner fa-spin"></i> Daniela Díaz (En proceso)
+                <i class="fa-solid fa-spinner fa-spin"></i> Inicio V1.1 (Pendiente)
+            </div>
+            <div style="background: var(--bg-page); border: 1px dashed #cbd5e1; padding: 10px 15px; border-radius: 8px; color: #475569; font-weight: 600;">
+                <i class="fa-regular fa-clock"></i> Próximas: Neumovital & Daniela
             </div>
             <div style="background: var(--bg-page); border: 1px dashed var(--border); padding: 10px 15px; border-radius: 8px; color: var(--text-muted); font-weight: 600;">
-                <i class="fa-regular fa-clock"></i> 6 Páginas por cumplir
+                <i class="fa-regular fa-clock"></i> 5 Páginas por cumplir
             </div>
         </div>
     </div>
@@ -525,8 +525,8 @@
                 <h3>Home / Inicio</h3>
                 <p>Landing page principal diseñada para máxima conversión y confianza.</p>
             </div>
-            <div class="status-pill">
-                <i class="fa-solid fa-circle-check"></i> Rediseñado
+            <div class="status-pill" style="background: #fffbeb; color: #d97706; border-color: #fde68a;">
+                <i class="fa-solid fa-spinner fa-spin"></i> Pendiente
             </div>
         </div>
 
@@ -618,6 +618,15 @@
         
         <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 10px;">Cronograma de entregas acelerado: <strong>~2 a 3 páginas por semana</strong> a partir de hoy.</p>
         
+        <!-- Atraso Alert -->
+        <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius-md); padding: 15px; margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px;">
+            <div style="font-size: 24px; color: #d97706; margin-top: 2px;"><i class="fa-solid fa-calendar-day"></i></div>
+            <div>
+                <strong style="color: #b45309; display: block; margin-bottom: 4px; font-size: 15px;">Línea de tiempo: Ligeramente Atrasado</strong>
+                <p style="color: #92400e; font-size: 13px; margin: 0;">Hoy es 26 de Junio. Los entregables de <em>Sobre Neumovital</em> y <em>Daniela Díaz</em> planificados para el 24-25 Jun están <strong>pendientes por iniciar</strong> debido a revisiones en la V1.1.</p>
+            </div>
+        </div>
+        
         <div class="roadmap-timeline">
             
             <!-- ITEM 0: Inicio -->
@@ -627,14 +636,14 @@
                     <div class="rm-header">
                         <div class="rm-title">Inicio (Home)</div>
                         <div class="rm-tags">
-                            <span class="rm-tag" style="background: #d1fae5; color: #047857; border: 1px solid #10b981; font-weight: 800; font-size: 13px; padding: 6px 14px; box-shadow: 0 0 15px rgba(16,185,129,0.4); animation: pulseGreen 2s infinite;"><i class="fa-solid fa-location-dot"></i> ¡Aquí Vamos!</span>
+                            <span class="rm-tag" style="background: #fffbeb; color: #d97706; border: 1px solid #fde68a; font-weight: 800; font-size: 13px; padding: 6px 14px; box-shadow: 0 0 15px rgba(217, 119, 6, 0.4); animation: pulseAmber 2s infinite;"><i class="fa-solid fa-location-dot"></i> ¡Aquí Vamos! / En Revisión</span>
                         </div>
                     </div>
                     <div class="rm-body">
                         <p>Landing page principal rediseñada. Incorpora validación social, badges de coberturas, diseño responsivo y optimización de conversión.<br><br>Ruta: <span class="rm-route">/</span></p>
                     </div>
                     <div class="rm-footer">
-                        <span style="font-size: 13px; font-weight: 700; color: #10b981;"><i class="fa-solid fa-check-circle"></i> Versión 1.1 Entregada</span>
+                        <span style="font-size: 13px; font-weight: 600; color: #d97706;"><i class="fa-solid fa-spinner fa-spin"></i> Pendiente de Aprobación</span>
                     </div>
                 </div>
             </div>
@@ -644,6 +653,11 @@
                     0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
                     70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
                     100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+                }
+                @keyframes pulseAmber {
+                    0% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.4); }
+                    70% { box-shadow: 0 0 0 10px rgba(217, 119, 6, 0); }
+                    100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0); }
                 }
         
         .dashboard-layout {
@@ -670,6 +684,7 @@
                             <div class="rm-title">1. Sobre Neumovital</div>
                             <div class="rm-tags">
                                 <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (24-25 Jun)</span>
+                                <span class="rm-tag" style="background: #f1f5f9; color: #475569; border: 1px dashed #cbd5e1;"><i class="fa-regular fa-clock"></i> Próxima por tomar</span>
                             </div>
                         </div>
                         <div class="rm-body">
@@ -683,19 +698,19 @@
                     </div>
 
                     <!-- ITEM 2 -->
-                    <div class="rm-content" style="border-color: #fde68a; background: #fffbeb;">
+                    <div class="rm-content">
                         <div class="rm-header">
                             <div class="rm-title">2. Daniela Díaz (Profesional)</div>
                             <div class="rm-tags">
                                 <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (24-25 Jun)</span>
-                                <span class="rm-tag" style="background: #fef3c7; color: #d97706; border: 1px solid #fde68a;"><i class="fa-solid fa-clock"></i> Pendiente</span>
+                                <span class="rm-tag" style="background: #f1f5f9; color: #475569; border: 1px dashed #cbd5e1;"><i class="fa-regular fa-clock"></i> Próxima por tomar</span>
                             </div>
                         </div>
                         <div class="rm-body">
                             <p>Página dedicada exclusivamente a la fundadora. Incluirá su perfil completo, biografía detallada, credenciales, su filosofía de trabajo con el Método Neumovital®, material audiovisual y publicaciones.<br><br>Ruta: <span class="rm-route">/daniela-diaz</span></p>
                         </div>
                         <div class="rm-footer">
-                            <span style="font-size: 13px; font-weight: 600; color: #d97706;"><i class="fa-solid fa-spinner fa-spin"></i> En desarrollo (Próximo)</span>
+                            <span style="font-size: 13px; font-weight: 600; color: #475569;"><i class="fa-regular fa-hourglass-half"></i> En espera</span>
                         </div>
                     </div>
                 </div>
@@ -807,8 +822,15 @@
 
 
 
-        </div>
         <div class="layout-sidebar">
+            <!-- RESUMEN REUNIÓN MODAL TRIGGER -->
+            <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: var(--radius-md); padding: 24px; margin-top: 20px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(14, 165, 233, 0.1);">
+                <h3 style="color: #0369a1; font-size: 18px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-people-group"></i> Última Reunión
+                </h3>
+                <p style="color: #0c4a6e; font-size: 14px; margin-bottom: 15px;">Registro de acuerdos y feedback de nuestra última sesión estratégica.</p>
+                <button onclick="document.getElementById('modal-reu').style.display='flex'" class="btn btn-primary" style="width: 100%; justify-content: center; background: #0284c7; box-shadow: none;">Ver Resumen</button>
+            </div>
             <!-- STOPPERS CRÍTICOS -->
             <div style="background: #fef2f2; border: 1px solid #fca5a5; border-radius: var(--radius-md); padding: 24px; margin-top: 20px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(239, 68, 68, 0.1);">
                 <h3 style="color: #b91c1c; font-size: 18px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
@@ -889,5 +911,32 @@
     </div>
 </div>
 
+    <!-- Modal Resumen Reunión -->
+    <div id="modal-reu" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+        <div style="background: var(--bg-page); max-width: 600px; width: 90%; border-radius: var(--radius-lg); padding: 30px; position: relative; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+            <button onclick="document.getElementById('modal-reu').style.display='none'" style="position: absolute; right: 20px; top: 20px; background: transparent; border: none; font-size: 20px; cursor: pointer; color: var(--text-muted);"><i class="fa-solid fa-xmark"></i></button>
+            <h2 style="font-size: 22px; font-weight: 800; color: var(--text-main); margin-bottom: 15px;"><i class="fa-solid fa-clipboard-check" style="color: #0284c7;"></i> Resumen Última Reunión</h2>
+            <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">Principales acuerdos y ajustes levantados en la revisión estratégica (V1.1).</p>
+            
+            <ul style="display: flex; flex-direction: column; gap: 15px; padding: 0; margin: 0; list-style: none;">
+                <li style="display: flex; gap: 12px; font-size: 14px; color: var(--text-main);">
+                    <i class="fa-solid fa-check-circle" style="color: #10b981; margin-top: 3px;"></i>
+                    <span><strong>Ajustes Móvil:</strong> Se aprobó ajuste CSS para centrar correctamente el contenido en móviles y se reparó el overlay del video.</span>
+                </li>
+                <li style="display: flex; gap: 12px; font-size: 14px; color: var(--text-main);">
+                    <i class="fa-solid fa-check-circle" style="color: #10b981; margin-top: 3px;"></i>
+                    <span><strong>Separación CTA:</strong> Se dio respiro al texto frente al ícono del botón CTA.</span>
+                </li>
+                <li style="display: flex; gap: 12px; font-size: 14px; color: var(--text-main);">
+                    <i class="fa-solid fa-check-circle" style="color: #10b981; margin-top: 3px;"></i>
+                    <span><strong>Estandarización Docs:</strong> Se estructuró y documentó el sistema de diseño (Markdown).</span>
+                </li>
+                <li style="display: flex; gap: 12px; font-size: 14px; color: var(--text-main);">
+                    <i class="fa-solid fa-clock" style="color: #d97706; margin-top: 3px;"></i>
+                    <span><strong>Pendientes de Cliente:</strong> Exequiel debe ampliar permisos de administración. Fotos nuevas de staff y logos están en espera.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
