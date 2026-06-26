@@ -545,7 +545,11 @@
             </div>
         </div>
 
-        <div class="features-grid">
+        <button class="btn btn-outline" style="margin-bottom: 25px; width: 100%; justify-content: center; font-size: 15px; background: var(--bg-page); border: 1px dashed var(--border); cursor: pointer;" onclick="const g = document.getElementById('features-grid-collapsible'); const b = document.getElementById('toggle-features-text'); const i = document.getElementById('toggle-features-icon'); if(g.style.display==='none'){g.style.display='grid'; b.innerText='Ocultar funcionalidades'; i.style.transform='rotate(180deg)';}else{g.style.display='none'; b.innerText='Ver detalle de funcionalidades (9)'; i.style.transform='rotate(0deg)';}">
+            <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i> <span id="toggle-features-text" style="margin: 0 8px; font-weight: 700;">Ver detalle de funcionalidades (9)</span> <i id="toggle-features-icon" class="fa-solid fa-chevron-down" style="transition: transform 0.3s;"></i>
+        </button>
+
+        <div id="features-grid-collapsible" class="features-grid" style="display: none;">
             <div class="feature-item" style="position: relative;">
                 <div style="position: absolute; top: 15px; right: 15px; color: #10b981; font-size: 18px;"><i class="fa-solid fa-circle-check"></i></div>
                 <div class="feat-title"><i class="fa-solid fa-bolt"></i> Hero & Cobertura</div>
