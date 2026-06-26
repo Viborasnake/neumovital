@@ -497,12 +497,12 @@
         </div>
     </div>
 
-    <div class="bento-card" style="margin-bottom: 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+    <div class="bento-card" style="margin-bottom: 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-color: #fde68a; background: #fffbeb;">
         <div>
-            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Revisión de Funnel Externo (Systeme.io) <span style="font-size: 11px; background: #ffe4e6; color: #e11d48; padding: 3px 8px; border-radius: 20px; font-weight: 600; margin-left: 5px; vertical-align: middle;">* solicitud complementaria</span></h3>
+            <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Revisión de Funnel Externo (Systeme.io) <span style="font-size: 11px; background: #fef3c7; color: #d97706; border: 1px solid #fde68a; padding: 3px 8px; border-radius: 20px; font-weight: 600; margin-left: 5px; vertical-align: middle;"><i class="fa-solid fa-clock"></i> Pendiente de revisión UX</span></h3>
             <p style="color: var(--text-muted); font-size: 15px;">Analizar la estructura de conversión de la siguiente landing page externa creada por Rodrigo para extraer aprendizajes.</p>
         </div>
-        <a href="https://rodrigo-rgv02.systeme.io/neumovital" target="_blank" class="btn btn-primary" style="background: #0f172a; box-shadow: none;">
+        <a href="https://rodrigo-rgv02.systeme.io/neumovital" target="_blank" class="btn btn-primary" style="background: #d97706; box-shadow: none; color: #fff;">
             <i class="fa-solid fa-arrow-up-right-from-square"></i> Revisar Enlace
         </a>
     </div>
@@ -636,123 +636,148 @@
         
         <div class="roadmap-timeline">
             
-            <!-- ITEM 1 -->
+            <!-- ITEM 0: Inicio -->
             <div class="rm-card">
-                <div class="rm-node"></div>
-                <div class="rm-content">
+                <div class="rm-node" style="border-color: #10b981; background: #10b981;"></div>
+                <div class="rm-content" style="border-color: #10b981; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);">
                     <div class="rm-header">
-                        <div class="rm-title">1. Sobre Neumovital</div>
+                        <div class="rm-title">Inicio (Home)</div>
                         <div class="rm-tags">
-                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (24-25 Jun)</span>
-
+                            <span class="rm-tag" style="background: #d1fae5; color: #047857; border: 1px solid #10b981; font-weight: 800; font-size: 13px; padding: 6px 14px; box-shadow: 0 0 15px rgba(16,185,129,0.4); animation: pulseGreen 2s infinite;"><i class="fa-solid fa-location-dot"></i> ¡Aquí Vamos!</span>
                         </div>
                     </div>
                     <div class="rm-body">
-                        <p>Detallar la misión, visión, valores (con enfoque humano), la historia de la clínica, la presentación de todo el equipo de profesionales y fotos de las instalaciones.<br><br>Ruta: <span class="rm-route">/sobre-neumovital</span></p>
+                        <p>Landing page principal rediseñada. Incorpora validación social, badges de coberturas, diseño responsivo y optimización de conversión.<br><br>Ruta: <span class="rm-route">/</span></p>
                     </div>
                     <div class="rm-footer">
-                        <div class="action-links">
-                            <a href="https://neumovital.cl/about-us/" target="_blank" class="btn btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Base Actual</a>
+                        <span style="font-size: 13px; font-weight: 700; color: #10b981;"><i class="fa-solid fa-check-circle"></i> Versión 1.1 Entregada</span>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                @keyframes pulseGreen {
+                    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+                    70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+                    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+                }
+            </style>
+
+            <!-- SEMANA 1 (24-25 Jun) -->
+            <div class="rm-card">
+                <div class="rm-node"></div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                    <!-- ITEM 1 -->
+                    <div class="rm-content">
+                        <div class="rm-header">
+                            <div class="rm-title">1. Sobre Neumovital</div>
+                            <div class="rm-tags">
+                                <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (24-25 Jun)</span>
+                            </div>
+                        </div>
+                        <div class="rm-body">
+                            <p>Detallar la misión, visión, valores (con enfoque humano), la historia de la clínica, la presentación de todo el equipo de profesionales y fotos de las instalaciones.<br><br>Ruta: <span class="rm-route">/sobre-neumovital</span></p>
+                        </div>
+                        <div class="rm-footer">
+                            <div class="action-links">
+                                <a href="https://neumovital.cl/about-us/" target="_blank" class="btn btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Base Actual</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div class="rm-content" style="border-color: #fde68a; background: #fffbeb;">
+                        <div class="rm-header">
+                            <div class="rm-title">2. Daniela Díaz (Profesional)</div>
+                            <div class="rm-tags">
+                                <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (24-25 Jun)</span>
+                                <span class="rm-tag" style="background: #fef3c7; color: #d97706; border: 1px solid #fde68a;"><i class="fa-solid fa-clock"></i> Pendiente</span>
+                            </div>
+                        </div>
+                        <div class="rm-body">
+                            <p>Página dedicada exclusivamente a la fundadora. Incluirá su perfil completo, biografía detallada, credenciales, su filosofía de trabajo con el Método Neumovital®, material audiovisual y publicaciones.<br><br>Ruta: <span class="rm-route">/daniela-diaz</span></p>
+                        </div>
+                        <div class="rm-footer">
+                            <span style="font-size: 13px; font-weight: 600; color: #d97706;"><i class="fa-solid fa-spinner fa-spin"></i> En desarrollo (Próximo)</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ITEM 2 -->
+            <!-- SEMANA 1 (26-28 Jun) -->
             <div class="rm-card">
-                <div class="rm-node" style="border-color: #f59e0b;"></div>
-                <div class="rm-content" style="border-color: #fde68a; background: #fffbeb;">
-                    <div class="rm-header">
-                        <div class="rm-title">2. Daniela Díaz (Página Profesional)</div>
-                        <div class="rm-tags">
-                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (24-25 Jun)</span>
-                            <span class="rm-tag" style="background: #fef3c7; color: #d97706; border: 1px solid #fde68a;"><i class="fa-solid fa-clock"></i> Pendiente</span>
+                <div class="rm-node"></div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                    <!-- ITEM 3 -->
+                    <div class="rm-content">
+                        <div class="rm-header">
+                            <div class="rm-title">3. Servicios</div>
+                            <div class="rm-tags">
+                                <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (26-28 Jun)</span>
+                            </div>
+                        </div>
+                        <div class="rm-body">
+                            <p>Visión general de la oferta integral. Detalle de Rehabilitación Pulmonar, Laboratorio de Función Pulmonar (espirometría, DLCO) y Monitorización del Sueño, con CTAs de reserva.<br><br>Ruta: <span class="rm-route">/servicios</span></p>
+                        </div>
+                        <div class="rm-footer">
+                            <div class="action-links">
+                                <a href="https://neumovital.cl/services/" target="_blank" class="btn btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Base Actual</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="rm-body">
-                        <p>Página dedicada exclusivamente a la fundadora. Incluirá su perfil completo, biografía detallada, credenciales, su filosofía de trabajo con el Método Neumovital®, material audiovisual y publicaciones.<br><br>Ruta: <span class="rm-route">/daniela-diaz</span></p>
-                    </div>
-                    <div class="rm-footer">
-                        <span style="font-size: 13px; font-weight: 600; color: #d97706;"><i class="fa-solid fa-spinner fa-spin"></i> En desarrollo (Próximo entregable)</span>
+
+                    <!-- ITEM 4 -->
+                    <div class="rm-content">
+                        <div class="rm-header">
+                            <div class="rm-title">4. Para Médicos</div>
+                            <div class="rm-tags">
+                                <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (26-28 Jun)</span>
+                                <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
+                            </div>
+                        </div>
+                        <div class="rm-body">
+                            <p>Dirigida a profesionales derivadores. Mostrará a Neumovital como centro aliado en diagnóstico y rehabilitación, cómo derivar pacientes, y oportunidades de colaboración conjunta.<br><br>Ruta: <span class="rm-route">/para-medicos</span></p>
+                        </div>
+                        <div class="rm-footer">
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ITEM 3 -->
+            <!-- SEMANA 2 (1-2 Jul) -->
             <div class="rm-card">
                 <div class="rm-node"></div>
-                <div class="rm-content">
-                    <div class="rm-header">
-                        <div class="rm-title">3. Servicios</div>
-                        <div class="rm-tags">
-                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (26-28 Jun)</span>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                    <!-- ITEM 5 -->
+                    <div class="rm-content">
+                        <div class="rm-header">
+                            <div class="rm-title">5. Patologías</div>
+                            <div class="rm-tags">
+                                <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 2 (1-2 Jul)</span>
+                                <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
+                            </div>
+                        </div>
+                        <div class="rm-body">
+                            <p>Enumerará las enfermedades tratadas (EPOC, EPI, Cáncer de Pulmón, Fibrosis Pulmonar, etc.), con una breve descripción de cada una y cómo la clínica ayuda en cada condición.<br><br>Ruta: <span class="rm-route">/patologias</span></p>
+                        </div>
+                        <div class="rm-footer">
+                        </div>
+                    </div>
 
+                    <!-- ITEM 6 -->
+                    <div class="rm-content">
+                        <div class="rm-header">
+                            <div class="rm-title">6. FAQ</div>
+                            <div class="rm-tags">
+                                <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 2 (1-2 Jul)</span>
+                                <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="rm-body">
-                        <p>Visión general de la oferta integral. Detalle de Rehabilitación Pulmonar, Laboratorio de Función Pulmonar (espirometría, DLCO) y Monitorización del Sueño, con CTAs de reserva.<br><br>Ruta: <span class="rm-route">/servicios</span></p>
-                    </div>
-                    <div class="rm-footer">
-                        <div class="action-links">
-                            <a href="https://neumovital.cl/services/" target="_blank" class="btn btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Base Actual</a>
+                        <div class="rm-body">
+                            <p>Resolver dudas comunes sobre costos, proceso de agendamiento, atención por Fonasa/Isapre y duración de los tratamientos respiratorios.<br><br>Ruta: <span class="rm-route">/faq</span></p>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ITEM 4 -->
-            <div class="rm-card">
-                <div class="rm-node"></div>
-                <div class="rm-content">
-                    <div class="rm-header">
-                        <div class="rm-title">4. Para Médicos</div>
-                        <div class="rm-tags">
-                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 1 (26-28 Jun)</span>
-                            <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
+                        <div class="rm-footer">
                         </div>
-                    </div>
-                    <div class="rm-body">
-                        <p>Dirigida a profesionales derivadores. Mostrará a Neumovital como centro aliado en diagnóstico y rehabilitación, cómo derivar pacientes, y oportunidades de colaboración conjunta.<br><br>Ruta: <span class="rm-route">/para-medicos</span></p>
-                    </div>
-                    <div class="rm-footer">
-                    </div>
-                </div>
-            </div>
-
-            <!-- ITEM 5 -->
-            <div class="rm-card">
-                <div class="rm-node"></div>
-                <div class="rm-content">
-                    <div class="rm-header">
-                        <div class="rm-title">5. Patologías</div>
-                        <div class="rm-tags">
-                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 2 (1-2 Jul)</span>
-                            <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
-                        </div>
-                    </div>
-                    <div class="rm-body">
-                        <p>Enumerará las enfermedades tratadas (EPOC, EPI, Cáncer de Pulmón, Fibrosis Pulmonar, etc.), con una breve descripción de cada una y cómo la clínica ayuda en cada condición.<br><br>Ruta: <span class="rm-route">/patologias</span></p>
-                    </div>
-                    <div class="rm-footer">
-                    </div>
-                </div>
-            </div>
-
-            <!-- ITEM 6 -->
-            <div class="rm-card">
-                <div class="rm-node"></div>
-                <div class="rm-content">
-                    <div class="rm-header">
-                        <div class="rm-title">6. FAQ</div>
-                        <div class="rm-tags">
-                            <span class="rm-tag tag-date"><i class="fa-regular fa-calendar"></i> Sem 2 (1-2 Jul)</span>
-                            <span class="rm-tag tag-new"><i class="fa-solid fa-sparkles"></i> Página Nueva</span>
-                        </div>
-                    </div>
-                    <div class="rm-body">
-                        <p>Resolver dudas comunes sobre costos, proceso de agendamiento, atención por Fonasa/Isapre y duración de los tratamientos respiratorios.<br><br>Ruta: <span class="rm-route">/faq</span></p>
-                    </div>
-                    <div class="rm-footer">
                     </div>
                 </div>
             </div>
