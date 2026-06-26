@@ -514,7 +514,9 @@ var wcpayAssets = {"url":"https:\/\/neumovital.cl\/wp-content\/plugins\/woocomme
 </div>
 <p><a href="https://neumovital.cl/reserva-funcion-pulmonar/" class="vg-btn-outline">Comenzar Tratamiento</a></div>
 <div class="vg-zig-img">
-<div class="vg-zig-img-inner"><img decoding="async" src="https://neumovital.cl/wp-content/uploads/2025/07/20250626_132653-scaled.jpg" alt="Diagnóstico"></div>
+<div class="vg-zig-img-inner sequence-container" style="cursor: pointer;" data-frames="31" data-prefix="https://neumovital.cl/wp-content/uploads/2026/06/cabina-pletismografia-rehabilitacion-pulmonar-numovital-" data-suffix=".png">
+<img decoding="async" src="https://neumovital.cl/wp-content/uploads/2026/06/cabina-pletismografia-rehabilitacion-pulmonar-numovital-001.png" alt="Diagnóstico">
+</div>
 </div>
 </div>
 <div class="vg-zig-row reverse">
@@ -721,6 +723,41 @@ var themeConfig = {"GENERAL":{"debug":false,"onePagerScrollSpeed":300},"NEWSLETT
 </script>
 <script type="text/javascript" src="https://neumovital.cl/wp-content/themes/healthflex/assets/js/theme.js?ver=6.8.5" id="plethora-init-js"></script>
 <script type="text/javascript" src="https://neumovital.cl/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=7.4" id="wpb_composer_front_js-js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.sequence-container').forEach(container => {
+        const img = container.querySelector('img');
+        const totalFrames = parseInt(container.getAttribute('data-frames'));
+        const prefix = container.getAttribute('data-prefix');
+        const suffix = container.getAttribute('data-suffix');
+        let currentFrame = 1;
+        let interval;
+        
+        // Preload frames silently
+        for(let i = 1; i <= totalFrames; i++) {
+            let num = i.toString().padStart(3, '0');
+            let preImg = new Image();
+            preImg.src = prefix + num + suffix;
+        }
+
+        container.addEventListener('mouseenter', () => {
+            if(interval) clearInterval(interval);
+            interval = setInterval(() => {
+                currentFrame++;
+                if(currentFrame > totalFrames) currentFrame = 1;
+                let num = currentFrame.toString().padStart(3, '0');
+                img.src = prefix + num + suffix;
+            }, 60); // approx 16 fps
+        });
+
+        container.addEventListener('mouseleave', () => {
+            if(interval) clearInterval(interval);
+            currentFrame = 1;
+            img.src = prefix + '001' + suffix;
+        });
+    });
+});
+</script>
 <script></script><!-- TEMPLATE PART: /themes/healthflex/page.php --></body>
 </html>
 
