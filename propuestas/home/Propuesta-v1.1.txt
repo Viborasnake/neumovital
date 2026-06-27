@@ -34,6 +34,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     gsap.registerPlugin(ScrollTrigger);
     const canvas = document.getElementById("vg-scroll-seq-canvas");
+    
     const context = canvas.getContext("2d");
     const frameCount = 31;
     const currentFrame = index => (
@@ -74,53 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         onUpdate: render
     });
-    
-    // Animacion Diagnostico
-    const canvasDiag = document.getElementById("vg-scroll-seq-canvas-diag");
-    if(canvasDiag) {
-        const contextDiag = canvasDiag.getContext("2d");
-        const frameCountDiag = 31;
-        const currentFrameDiag = index => (
-            `https://neumovital.cl/wp-content/uploads/2026/06/cabina-pletismografia-rehabilitacion-pulmonar-numovital-${(index + 1).toString().padStart(3, '0')}.png`
-        );
-        const imagesDiag = [];
-        const framesDiag = { frame: 0 };
-        for (let i = 0; i < frameCountDiag; i++) {
-            const img = new Image();
-            img.src = currentFrameDiag(i);
-            img.onload = () => {
-                if (i === 0) renderDiag();
-            };
-            imagesDiag.push(img);
-        }
-        function renderDiag() {
-            if (imagesDiag[0].complete && imagesDiag[0].naturalWidth > 0) {
-                canvasDiag.width = imagesDiag[0].naturalWidth;
-                canvasDiag.height = imagesDiag[0].naturalHeight;
-            }
-            const img = imagesDiag[Math.round(framesDiag.frame)];
-            if (img && img.complete) {
-                contextDiag.clearRect(0, 0, canvasDiag.width, canvasDiag.height);
-                contextDiag.drawImage(img, 0, 0, canvasDiag.width, canvasDiag.height);
-            }
-        }
-        gsap.to(framesDiag, {
-            frame: frameCountDiag - 1,
-            snap: "frame",
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".vg-card-diag",
-                start: "top 70%",
-                end: "bottom 30%",
-                scrub: 0.1
-            },
-            onUpdate: renderDiag
-        });
-        window.addEventListener("resize", () => {
-            renderDiag();
-        });
-    }
-
     
     // Animacion Diagnostico
     const canvasDiag = document.getElementById("vg-scroll-seq-canvas-diag");
