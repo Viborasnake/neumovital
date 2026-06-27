@@ -27,8 +27,6 @@
 <div id="vg-price-modal-diag" class="vg-modal-overlay" onclick="if(event.target===this)this.style.display='none';"><div class="vg-modal-box"><span class="vg-modal-close" onclick="document.getElementById('vg-price-modal-diag').style.display='none';">&times;</span><div style="position:relative;z-index:1;"><h2 style="font-size:26px;font-weight:900;color:#111111 !important;text-transform:uppercase;letter-spacing:-0.5px;margin-bottom:8px;">Rangos de Precios</h2><p style="font-size:15px;color:#888888 !important;margin-bottom:28px;">Conoce los copagos aproximados para exámenes respiratorios.</p><div style="overflow-x:auto;"><table class="vg-price-table"><thead><tr><th>Examen</th><th>Copago<br>FONASA</th><th>Copago<br>ISAPRE</th></tr></thead><tbody><tr><td>💨 Espirometría Basal</td><td>$5.000 – $8.000</td><td>$7.000 – $15.000</td></tr><tr><td>🛀 Pletismografía Corporal</td><td>$25.000 – $50.000</td><td>$15.000 – $60.000</td></tr><tr><td>🛌 Estudio de Sueño</td><td>$45.000 – $60.000</td><td>$50.000 – $85.000</td></tr></tbody></table></div><p style="font-size:12px;color:#aaaaaa !important;margin-top:18px;font-style:italic;"><i class="fa fa-info-circle" style="margin-right:5px;"></i>* Valores meramente referenciales. El copago final dependerá del tramo de Fonasa o el plan específico de tu Isapre.</p><div style="margin-top:22px;"><a href="https://wa.me/56951516662" class="vg-btn" style="padding:13px 28px;font-size:14px;width:100%;text-align:center;display:block;box-sizing:border-box;"><i class="fa fa-whatsapp" style="margin-right:8px;"></i>Consultar mi valor exacto</a></div></div></div></div><div id="vg-price-modal-rehab" class="vg-modal-overlay" onclick="if(event.target===this)this.style.display='none';"><div class="vg-modal-box"><span class="vg-modal-close" onclick="document.getElementById('vg-price-modal-rehab').style.display='none';">&times;</span><div style="position:relative;z-index:1;"><h2 style="font-size:26px;font-weight:900;color:#111111 !important;text-transform:uppercase;letter-spacing:-0.5px;margin-bottom:8px;">Rangos de Precios</h2><p style="font-size:15px;color:#888888 !important;margin-bottom:28px;">Conoce los copagos aproximados por sesión de Rehabilitación Pulmonar.</p><div style="overflow-x:auto;"><table class="vg-price-table"><thead><tr><th>Tratamiento</th><th>Copago<br>FONASA</th><th>Copago<br>ISAPRE</th></tr></thead><tbody><tr><td>🪴 Sesión de Rehabilitación Pulmonar</td><td>$6.500 – $12.000</td><td>$8.000 – $18.000</td></tr></tbody></table></div><p style="font-size:12px;color:#aaaaaa !important;margin-top:18px;font-style:italic;"><i class="fa fa-info-circle" style="margin-right:5px;"></i>* Valores meramente referenciales. El copago final dependerá del tramo de Fonasa o el plan específico de tu Isapre.</p><div style="margin-top:22px;"><a href="https://wa.me/56951516662" class="vg-btn" style="padding:13px 28px;font-size:14px;width:100%;text-align:center;display:block;box-sizing:border-box;"><i class="fa fa-whatsapp" style="margin-right:8px;"></i>Consultar mi valor exacto</a></div></div></div></div>
 
 </div><script>var vgAudioPlaying=false;var vgCurrentBtn=null;function vgPlayText(textId,btnElement){if('speechSynthesis' in window){if(vgAudioPlaying&&vgCurrentBtn===btnElement){window.speechSynthesis.pause();btnElement.innerHTML='<i class="fa fa-play"></i> Escuchar Sección';btnElement.classList.remove('playing');vgAudioPlaying=false;vgCurrentBtn=null;return;}window.speechSynthesis.cancel();if(vgCurrentBtn&&vgCurrentBtn!==btnElement){vgCurrentBtn.innerHTML='<i class="fa fa-play"></i> Escuchar Sección';vgCurrentBtn.classList.remove('playing');}var textContainer=document.getElementById(textId);if(!textContainer)return;var text=textContainer.innerText||textContainer.textContent;if(textId==='text-hero-v1'){var t2=document.getElementById('text-glass-v1');if(t2){text+='. '+(t2.innerText||t2.textContent);}}text=text.replace(/[—\-_|]/g,'. ');text=text.replace(/[®""]/g,'');text=text.replace(/\n+/g,'. ');text=text.replace(/\s+/g,' ');var msg=new SpeechSynthesisUtterance();msg.text=text;msg.lang='es-CL';msg.rate=0.95;msg.pitch=1;btnElement.innerHTML='<i class="fa fa-pause"></i> Pausar Audio';btnElement.classList.add('playing');vgAudioPlaying=true;vgCurrentBtn=btnElement;msg.onend=function(){if(vgCurrentBtn===btnElement){btnElement.innerHTML='<i class="fa fa-play"></i> Escuchar Sección';btnElement.classList.remove('playing');vgAudioPlaying=false;vgCurrentBtn=null;}};msg.onerror=function(){if(vgCurrentBtn===btnElement){btnElement.innerHTML='<i class="fa fa-play"></i> Escuchar Sección';btnElement.classList.remove('playing');vgAudioPlaying=false;vgCurrentBtn=null;}};window.speechSynthesis.speak(msg);}else{alert('Lo sentimos, tu navegador actual no soporta lectura por voz.');}};(function(){var vb=document.querySelector('.vg-video-banner');if(vb){var vEl=document.createElement('video');vEl.autoplay=true;vEl.muted=true;vEl.loop=true;vEl.setAttribute('playsinline','');vEl.style.cssText='position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;object-fit:cover;z-index:0;';var vs=document.createElement('source');vs.src='https://neumovital.cl/wp-content/uploads/2026/06/centro-rehabilitacion-pulmonar-numovital.mp4';vs.type='video/mp4';vEl.appendChild(vs);vb.insertBefore(vEl,vb.firstChild);vEl.play().catch(function(){});}})();(function(){var vm=document.getElementById('vg-video-modal');if(vm){var vEl2=document.createElement('video');vEl2.controls=true;vEl2.style.cssText='width:100%;border-radius:14px;margin-top:10px;max-height:68vh;background:#000;display:block;position:relative;z-index:1;';var vs2=document.createElement('source');vs2.src='https://neumovital.cl/wp-content/uploads/2026/06/centro-rehabilitacion-pulmonar-numovital.mp4';vs2.type='video/mp4';vEl2.appendChild(vs2);vm.querySelector('.vg-modal-box').appendChild(vEl2);}})();</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
 function initVGScroll() {
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
@@ -128,9 +126,27 @@ function initVGScroll() {
         if(typeof render === 'function') render();
     });
 }
+function loadScript(src, callback) {
+    if (document.querySelector('script[src="' + src + '"]')) {
+        callback(); return;
+    }
+    var s = document.createElement('script');
+    s.src = src;
+    s.onload = callback;
+    document.head.appendChild(s);
+}
+
+function bootVG() {
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', function() {
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', function() {
+            initVGScroll();
+        });
+    });
+}
+
 if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initVGScroll);
+    document.addEventListener("DOMContentLoaded", bootVG);
 } else {
-    initVGScroll();
+    bootVG();
 }
 </script>[/vc_column_text][/vc_column][/vc_row]
